@@ -13,3 +13,15 @@ for (let y = 1; y < size; y++) {
   board += "\n";
 }
 console.log(board);
+
+// recursion
+function power(base, exponent) {
+  if (exponent == 0) {
+    return 1;
+  } else {
+    console.log(power(base, exponent - 1) / 2);
+    return base * power(base, exponent - 1);
+  }
+}
+
+console.log(power(2, 4));
