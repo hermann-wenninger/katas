@@ -112,10 +112,11 @@ function tableFor(event, journal) {
     if (entry.squirrel) index += 2;
     table[index] += 1;
   }
+  console.log(table);
   return table;
 }
 
-function journalEvents(JOURNAL) {
+function journalEvents(journal) {
   let events = [];
   for (let entry of journal) {
     for (let event of entry.events) {
@@ -124,6 +125,7 @@ function journalEvents(JOURNAL) {
       }
     }
   }
+  console.log(events);
   return events;
 }
 
@@ -145,3 +147,9 @@ var list = {
     }
   }
 };
+journalEvents(JOURNAL);
+
+console.log(tableFor("pizza", JOURNAL));
+console.log(tableFor("work", JOURNAL));
+console.log(tableFor("running", JOURNAL));
+console.log(tableFor("carrot", JOURNAL));
