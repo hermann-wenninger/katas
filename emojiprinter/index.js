@@ -3,7 +3,7 @@ let emojis = [
   0x1f354, 0x1f35f, 0x1f6c0, 0x1f48e, 0x1f5fa, 0x23f0, 0x1f579, 0x1f4da,
   0x1f431, 0x1f42a, 0x1f439, 0x1f424,
 ];
-
+// numbers between a and b
 function rangenum(a, b) {
   let numlist = [];
   for (let i = a; i < b; i++) {
