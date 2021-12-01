@@ -113,10 +113,10 @@ let input = document.querySelector("#input");
 let output = ("#output");
 
 // create a tree
-const generateDataTree = (text) => {
-  const array = text.split("\n");
+    const generateDataTree = (text) => {
+    const array = text.split("\n");
 
-  const objectArr = array.map((item, i) => {
+    const objectArr = array.map((item, i) => {
     const level = item.match(/#/g)?.length;
     const text = item.replace(/#/g, "");
     return { text, level, id: i, children: [] };
