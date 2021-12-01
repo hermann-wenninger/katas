@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-
 console.clear();
 
 let input = document.querySelector("#input");
@@ -104,7 +101,7 @@ console.log(input);
 
 
 generate();
-=======
+
 
 
 console.clear();
@@ -210,4 +207,4 @@ console.log(input);
 
 
 generate();
->>>>>>> 23f5efdc880afbdd468cacb017f835757fa424a3
+
