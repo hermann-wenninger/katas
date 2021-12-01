@@ -79,9 +79,27 @@ function animate(elementId){
   let el = document.getElementById(elementId);
   let tick = 0;
   let timer = setInterval(function(){
-    if(tick<100){
-      el.style.left = el.style.top = tick +'px';
+    if(tick<(innerWidth-55)){
+      el.style.left  = tick +'px';
+      
       tick++;}else{clearInterval(timer);}
       
-  },2000);}
+  },10);}
   animate('box');
+
+  function nino(nino,treff){
+    report(nino +' ist unterwegs zur....' + treff);
+  }
+  function report(message){
+    console.log(message);
+  }
+  nino('alfred','stadthalle');
+  nony1.finox();
+  const firstConst = "samurai";
+  assert(firstConst === "samurai", "firstConst is a samurai");
+  try {
+    firstConst = "ninja";
+    console.log("Shouldn't be here");
+  } catch (e) {
+    console.log(e);
+  }
