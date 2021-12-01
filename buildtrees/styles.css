@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .container {
   display: flex;
   flex: row wrap;
@@ -21,3 +22,28 @@
   background-color: #eee;
   padding: 0.5em;
 }
+=======
+.container {
+  display: flex;
+  flex: row wrap;
+  margin: 10px;
+}
+
+#input {
+  width: 50%;
+  height: 300px;
+  border: none;
+  padding: 0.5em;
+}
+
+#output {
+  white-space: pre;
+  font-family: monospace;
+  font-weight: light;
+  margin: 0;
+  width: 50%;
+  height: 300px;
+  background-color: #eee;
+  padding: 0.5em;
+}
+>>>>>>> 23f5efdc880afbdd468cacb017f835757fa424a3
