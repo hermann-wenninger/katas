@@ -46,10 +46,42 @@ later();
 let x = assert(outerValue === "inner Value", "i can see the inner");
 addMessage(root,addMessage(root,'wauwww'));
 addMessage(root,assert(true,'noch ein eintrag'));
-addMessage(root,later());
+
 
 let xyz =document.getElementsByTagName('#root > li:nth-child(1)');
 let z = root.appendChild(document.createElement('li'));
-z.innerText='SDFGHJKLÖ'
+z.innerText='tonale Def-list\'s'
 console.log(xyz);
-addMessage(root, "new eintrag");
+
+
+function Nony(){
+  let fino = 'auserlitz';
+  let num = 0;
+  this.getFino = function(){
+    return this.finox();
+  };
+  this.finox = function(){
+    num++;
+    return fino + "-" + num;
+  };
+}
+let nony1 = new Nony();
+
+console.log('##############')
+assert(nony1.fino === undefined, 'the private data is not accessiible')
+for(let i =0; i<=2; i++){
+  addMessage(root, nony1.finox());
+}
+console.log(nony1.getFino());
+console.log(nony1);
+
+function animate(elementId){
+  let el = document.getElementById(elementId);
+  let tick = 0;
+  let timer = setInterval(function(){
+    if(tick<100){
+      el.style.left = el.style.top = tick +'px';
+      tick++;}else{clearInterval(timer);}
+      
+  },2000);}
+  animate('box');
