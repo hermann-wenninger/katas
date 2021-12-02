@@ -99,7 +99,34 @@ function animate(elementId){
   assert(firstConst === "samurai", "firstConst is a samurai");
   try {
     firstConst = "ninja";
-    console.log("Shouldn't be here");
+    addMessage(root,"Shouldn't be here");
   } catch (e) {
-    console.log(e);
+    let x = String(e).split(':');
+    addMessage(root,x[0]);
   }
+  const firstRonin = "Kiyokawa";
+  check(firstRonin);
+  function check(ronin) {
+    return assert(ronin === "Kiyokawa", "The ronin was checked! ");
+  }
+  addMessage(root,check(firstRonin));
+
+   function animateIt(elementId) {
+     var elem = document.getElementById(elementId);
+     var tick = 0;
+     var timer = setInterval(function () {
+       if (tick < innerWidth - 55) {
+         elem.style.left  = tick + "px";
+         elem.style.top = Math.sin(tick)+'px';
+         elem.style.backgroundColor = `rgba(${tick} ,${tick} ,${tick},0.5)`;
+         tick++;
+       } else {
+         clearInterval(timer);
+         assert(tick === 100, "Tick accessed via a closure.");
+         assert(elem, "Element also accessed via a closure.");
+         assert(timer, "Timer reference also obtained via a closure.");
+       }
+     }, 50);
+   }
+   animateIt("box1");
+   animateIt("box2");

@@ -10,9 +10,19 @@
         margin:10%;
         padding: 12px;
     }
+    li::before {
+        background-color: rgb(185, 175, 175);
+        height: 30px;
+        width: 30px;
+        content: 'n';
+        position: absolute;
+        left:45px;
+        text-align: center;
+        
+    }
     
     li:nth-child(3)::after{
-        color:green; 
+        color:rgb(48, 58, 119); 
         content:'allahhh';
         border: 4px solid black;
         padding: 8px;
@@ -21,7 +31,7 @@
     li {
         padding:8px;
         font-family: 'Courier New', Courier, monospace;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: 600;
         width: 70%;
         height: 20px;
@@ -31,7 +41,7 @@
     li:nth-of-type(4n) {
   color: rgb(74, 5, 77);
 }
-li:last-child{color:rgb(226, 41, 72)}
+
 #box {
     width: 50px;
     height: 50px;
@@ -39,11 +49,25 @@ li:last-child{color:rgb(226, 41, 72)}
     position: relative;
     top:-45px;
 }
+#box1, #box2{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(236, 119, 22, 0.726);
+    position: relative;
+    margin:10px;
+}
+   li:nth-of-type(3n) {
+  color: rgb(209, 52, 86);
+}
+li:last-child{color:rgb(218, 204, 17);
+background-color:red}
     </style>
 </head>
 <body>
     <ul id="root"></ul>
     <div id="box"></div>
+    <div id="box1">First Box</div>
+    <div id="box2">Second Box</div>
   <script src="index.js"></script>  
 </body>
 </html>
